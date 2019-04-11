@@ -1,5 +1,6 @@
 docker-build:
-	mvn clean install
+	mvn clean package -DskipTests
+	cp target/hello-springboot.jar .
 	docker build -t tadayosi/hello-springboot .
 
 docker-run:
